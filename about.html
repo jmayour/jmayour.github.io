@@ -1,174 +1,68 @@
-<!doctype html>
+<html>
 
-<!--
+<head>
+<link rel="stylesheet" type="text/css" href="akinoshi.css">
+</head>
 
-	File: index.html
-	----------------
-	This is a javascript demo to show how to render
-	OpenLabTaipei new logo using three.js.
+<body>
 
-	OpenLabTaipei
-	http://www.openlabtaipei.org/
+<div id="top"><h1>a k i n o s h i</h1></div>
 
-	three.js
-	https://github.com/mrdoob/three.js/
-	
-	Author: Akinori Kinoshita
-	E-mail: art.akinoshi -at- gmail.com
-	Date: Fri Jun 22 11:14:39 CST 2012
-	
--->
+<div id="bot">
 
-<html lang="en">
-	<head>
-		<title>example-javascript - OpenLabTaipei new logo</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<style>
-			body {
-				background-color: #ffffff;
-				margin: 0px;
-				overflow: hidden;
-			}
+<div id="botleft">
 
-			#info {
-				position: absolute;
-				top: 0px; width: 100%;
-				color: #000000;
-				padding: 5px;
-				font-family: Monospace;
-				font-size: 13px;
-				text-align: center;
-			}
+<ul>
+<li><a href="about.html">About</a></li>
+<li><a href="works">Works</a></li>
+<li><a href="teaching">Teaching</a></li>
+<li><a href="links">Links</a></li>
 
-			a {
-				color: #ff0080;
-				text-decoration: none;
-			}
+</ul>
 
-			a:hover {
-				color: #0080ff;
-			}
-		</style>
-	</head>
-	<body>
+</div>
 
-		<div id="container"></div>
-		<div id="info">
-			<a href="http://github.com/mrdoob/three.js" target="_blank">three.js</a> - OpenLabTaipei new logo demo.
-		</div>
+<div id="botright">
+<p>Akinori Kinoshita was born in 1984, has Chinese and Japanese descent.
+Since he got the bachelor degree of electronic engineering from Purdue University,
+USA, he has been worked in technology cooperation in Taiwan until now.
+He uses his off work hours to engage himself actively in some activities like free software and Floss Art etc. In
+2010, he cooperated with Anaisa Franco, a Brazilian artist, to create interactive
+sculpture〈Paranoia〉. He also cooperates with the member Yuan Yuan in OpenLab.Taipei
+and created prompt music work〈Scene〉. He has been performed in Freak Out Beast
+2010 Spring Music Festival, SAT+OpenLab.Taipei 360, Priceless Freedom, and Sound
+Bits.</p>
+<p>木下晃德（Aki），1984 年生的日中混血兒，2006 年取得美國普渡大學電子工程學位文憑後，在
+台灣的科技公司就職至今。平日利用下班時間積極參與自由軟體及 Floss Art 等活動，2010 年時與
+巴西藝術家 Anaisa Franco 共同創作互動雕塑〈Paranoia〉，與同為OpenLab.Taipei 的成員圓圓一
+起創作即時音樂作品〈Scene〉，曾於 年獸二零 一零立春音樂藝術祭、沈浸之境 吵
+─SAT+OpenLab.Taipei 360 環景音像表演 、自由無價 、Sound Bits 中演出。</p>
+<p>木下晃徳 （きのした あきのり、1984年2月1日）、日本人の父と台湾人の母の間に生まれる、2006 年にパデュー大学電子工学部課程を得て、 今は台湾のパソコン会社で勤務中。 平日はオフタイム利用し積極的にフリ ソフト及び ー Floss Art 等の活動に 加、 参 2010 年にブラジルア ティスト ー
+Anaisa Franco とインタラクティブ彫刻〈Paranoia〉を共同製作、又OpenLab.Taipei の一員圓圓とリア
+ルタイム音楽作品〈Scene〉を製作、2010 年のパニック 音 芸術祭、 獣 楽 SAT+OpenLab.Taipei
+360、自由無價、Sound Bits 等でパフォ マンスを披露。</p>
+<p>Akinori Kinoshita was born in 1984, has Chinese and Japanese descent.
+Since he got the bachelor degree of electronic engineering from Purdue University,
+USA, he has been worked in technology cooperation in Taiwan until now.
+He uses his off work hours to engage himself actively in some activities like free software and Floss Art etc. In
+2010, he cooperated with Anaisa Franco, a Brazilian artist, to create interactive
+sculpture〈Paranoia〉. He also cooperates with the member Yuan Yuan in OpenLab.Taipei
+and created prompt music work〈Scene〉. He has been performed in Freak Out Beast
+2010 Spring Music Festival, SAT+OpenLab.Taipei 360, Priceless Freedom, and Sound
+Bits.</p>
+<p>木下晃德（Aki），1984 年生的日中混血兒，2006 年取得美國普渡大學電子工程學位文憑後，在
+台灣的科技公司就職至今。平日利用下班時間積極參與自由軟體及 Floss Art 等活動，2010 年時與
+巴西藝術家 Anaisa Franco 共同創作互動雕塑〈Paranoia〉，與同為OpenLab.Taipei 的成員圓圓一
+起創作即時音樂作品〈Scene〉，曾於 年獸二零 一零立春音樂藝術祭、沈浸之境 吵
+─SAT+OpenLab.Taipei 360 環景音像表演 、自由無價 、Sound Bits 中演出。</p>
+<p>木下晃徳 （きのした あきのり、1984年2月1日）、日本人の父と台湾人の母の間に生まれる、2006 年にパデュー大学電子工学部課程を得て、 今は台湾のパソコン会社で勤務中。 平日はオフタイム利用し積極的にフリ ソフト及び ー Floss Art 等の活動に 加、 参 2010 年にブラジルア ティスト ー
+Anaisa Franco とインタラクティブ彫刻〈Paranoia〉を共同製作、又OpenLab.Taipei の一員圓圓とリア
+ルタイム音楽作品〈Scene〉を製作、2010 年のパニック 音 芸術祭、 獣 楽 SAT+OpenLab.Taipei
+360、自由無價、Sound Bits 等でパフォ マンスを披露。</p>
 
-		<script src="js/Three.js"></script>
+</div>
 
-		<script src="js/Stats.js"></script>
+</div>
 
-		<script>
-
-			var container, loader, stats;
-
-			var group;
-
-			var camera, scene, renderer, geometry, material, mesh;
-
-			var mouseX = 0, mouseY = 0;
-
-			var windowHalfX = window.innerWidth / 2;
-			var windowHalfY = window.innerHeight / 2;
-
-			document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-
-			init();
-			animate();
-
-		 	function init() {
-
-				container = document.createElement( 'div' );
-				document.body.appendChild( container );
-
-			        scene = new THREE.Scene();
-
-			        camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 10000 );
-			        camera.position.z = 5;
-			        scene.add( camera );
-
-				var cubeGeo = new THREE.CubeGeometry( 1, 1, 1 );
-				group = new THREE.Object3D();
-
-				for ( var i = 0; i < 100; i ++ ) {
-
-					var cubeMesh = new THREE.Mesh( cubeGeo, new THREE.MeshBasicMaterial( { color: Math.random() * 0xffffff, opacity: 0.25 } ) );
-					cubeMesh.position.x = Math.random() * 20 - 10;
-					cubeMesh.position.y = Math.random() * 20 - 10;
-					cubeMesh.position.z = Math.random() * 20 - 10;
-					cubeMesh.rotation.x = Math.random() * 360 * ( Math.PI / 180 );
-					cubeMesh.rotation.y = Math.random() * 360 * ( Math.PI / 180 );
-					cubeMesh.matrixAutoUpdate = false;
-					cubeMesh.updateMatrix();
-					group.add( cubeMesh );
-
-				}
-
-				scene.add( group );
-
-				var light = new THREE.PointLight( 0xffffff );
-				light.position.set( 500, 500, 500 );
-				scene.add( light );
-
-				loader = new THREE.JSONLoader();
-				loader.load( 'obj/ot-logo.js', function ( geometry ) {
-
-					material = new THREE.MeshLambertMaterial( { color: 0x01aed9, shading: THREE.FlatShading, overdraw: true } );
-					mesh = new THREE.Mesh( geometry, material );
-					scene.add( mesh );
-
-				} );
-
-			        renderer = new THREE.CanvasRenderer();
-			        renderer.setSize( window.innerWidth, window.innerHeight );
-
-				document.body.appendChild( renderer.domElement );
-
-				stats = new Stats();
-				stats.domElement.style.position = 'absolute';
-				stats.domElement.style.top = '0px';
-				stats.domElement.style.zIndex = 100;
-				container.appendChild( stats.domElement );
-
-    			}
-
-			function onDocumentMouseMove(event) {
-
-				mouseX = ( event.clientX - windowHalfX ) * 0.1;
-				mouseY = ( event.clientY - windowHalfY ) * 0.1;
-
-			}
-
-			function animate() {
-
-		        	requestAnimationFrame( animate );
-		        	render();
-				stats.update();
-
-			}
-
-		 	function render() {
-
-				camera.position.x += ( mouseX - camera.position.x ) * .05;
-				camera.position.y += ( - mouseY - camera.position.y ) * .05;
-				camera.lookAt( scene.position );
-
-				group.rotation.x = Math.sin( Date.now() * 0.0007 ) * 0.5;
-				group.rotation.y = Math.sin( Date.now() * 0.0003 ) * 0.5;
-				group.rotation.z = Math.sin( Date.now() * 0.0002 ) * 0.5;
-
-				mesh.rotation.x = Math.sin( Date.now() * 0.0007 ) * 0.5;
-				mesh.rotation.y = Math.sin( Date.now() * 0.0003 ) * 0.5;
-				mesh.rotation.z = Math.sin( Date.now() * 0.0002 ) * 0.5;
-
-			        renderer.render( scene, camera );
-
-    			}
-
-		</script>
-	</body>
+</body>
 </html>
