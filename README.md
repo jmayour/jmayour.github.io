@@ -1,4 +1,4 @@
-create-at-cooper
-================
+create@cooper website
+=====================
 
-Static website for create@cooper
+Static website for [create@cooper](http://createatcooper.org)
