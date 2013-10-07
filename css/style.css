@@ -46,9 +46,17 @@ h2 {
 	color: white;
 }
 
+#subscribe > .block:hover {
+	background-color: #224466;
+}
+
 #meetup {
 	background-color: #D15462;
 	color: white;
+}
+
+#meetup > .block:hover {
+	background-color: #9E404A;
 }
 
 header h1 {
@@ -138,7 +146,7 @@ h1.logo span.at {
 }
 
 article.dark > section {
-	margin-bottom: 2em;
+	margin-bottom: 1.5em;
 }
 
 article.dark > section:last-child {
@@ -266,6 +274,20 @@ div.footer {
 	font-size: 0pt;
 }
 
+div.wrap.no-header > .block {
+	display: inline-block;
+
+	font-size: 32pt;
+	font-weight: 200;
+
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 0.83em;
+	padding-bottom: 0.83em;
+
+	width: 90%;
+}
+
 div.footer > .block {
 	display: inline-block;
 
@@ -280,7 +302,7 @@ div.footer > .block {
 	width: 25%;
 }
 
-div.footer > .block:hover {
+div > .block:hover {
 	cursor: pointer;
 
 	-webkit-touch-callout: none;
@@ -289,7 +311,9 @@ div.footer > .block:hover {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+}
 
+div.footer > .block:hover {
 	color: white;
 	background-color: #333333;
 }
