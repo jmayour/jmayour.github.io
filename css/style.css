@@ -1,0 +1,393 @@
+html, body {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-size: 0pt;
+}
+
+div {
+	font-size: 16pt;
+}
+
+a, a:link, a:visited {
+	color: #e9eff2;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: white;
+}
+
+p {
+	font-weight: 300;
+}
+
+header {
+	color: #EEEEEE;
+	margin-top: 1%;
+}
+
+.full > header, .wrap > header {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+h2 {
+	font-size: 32pt;
+	font-weight: 200;
+}
+
+#subscribe {
+	background-color: #336699;
+	color: white;
+}
+
+#meetup {
+	background-color: #D15462;
+	color: white;
+}
+
+header h1 {
+	font-size: 48pt;
+	font-weight: normal;
+	margin-top: 0.67em;
+	margin-bottom: 0.67em;
+}
+
+.no-header > h2 {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+header h2 {
+	font-size: 32pt;
+	font-weight: 200;
+	margin-top: 0.83em;
+	margin-bottom: 0.83em;
+}
+
+li {
+	margin-top: 0.25em;
+	list-style-type: square;
+}
+
+li p {
+	margin-top: .25em;
+}
+
+h1.logo {
+	color: #EEEEEE;
+}
+
+h1.logo span.at {
+	color: #D15462;
+	display: inline-block;
+	padding-bottom: -4px;
+}
+
+#intro {
+	background: url(/images/bg.jpg) center center/cover no-repeat scroll;
+}
+
+#sponsors {
+	background: url(/images/bg-short.jpg) center center/cover no-repeat scroll;
+}
+
+#sponsors h2 {
+	padding-top: .83em;
+	padding-bottom: .83em;
+
+	padding-left: 5%;
+	padding-right: 5%;
+
+	color: #EEEEEE;
+
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.sponsors {
+	font-size: 0pt;
+}
+
+.sponsor {
+	box-sizing: border-box;
+	width: 33%;
+	display: inline-block;
+
+	vertical-align: center;
+
+	padding: 8px;
+}
+
+.sponsors img {
+	width: 100%;
+
+	vertical-align: center;
+}
+
+#events {
+	background: url(/images/events.jpg) center center/cover no-repeat fixed;
+}
+
+.dark {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+article.dark > section {
+	margin-bottom: 2em;
+}
+
+article.dark > section:last-child {
+	margin-bottom: 1em;
+}
+
+article.dark p {
+	margin-top: .25em;
+}
+
+#journey {
+	background: url(/images/journeys.jpg) center center/cover no-repeat scroll;
+}
+
+header.dark {
+	margin-top: 0;
+
+	width: 40%;
+	min-width: 26em;
+	max-width: 75%;
+}
+
+#journey > header > h2 {
+	padding-top: .33em;
+	padding-bottom: .33em;
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+
+.light {
+	background-color: #E2E2E2;
+}
+
+.light header {
+	color: #556270;
+}
+
+.light article {
+	color: #333333;
+}
+
+.light a, .light a:link {
+	color: #556270;
+}
+
+.light a:hover, .light a:active {
+	color: #333333;
+}
+
+#contact p {
+	margin-top: .25em;
+	margin-bottom: .5em;
+}
+
+.full {
+	width: 100%;
+	height: 100%;
+	min-height: 600px;
+
+	display: inline-block;
+}
+
+.full.short {
+	height: 50%;
+
+	min-height: 0px;
+}
+
+.wrap {
+	display: inline-block;
+
+	width: 100%;
+}
+
+h3 {
+	font-size: 28pt;
+	font-weight: 400;
+	margin-top: .25em;
+	margin-bottom: 0em;
+}
+
+strong {
+	font-weight: 400;
+}
+
+.title {
+	font-size: 18pt;
+}
+
+article {
+	color: white;
+	font-size: 14pt;
+	font-weight: 300;
+
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 1em;
+
+	line-height: 1.5;
+}
+
+article.about {
+	min-width: 40%;
+	max-width: 20em;
+
+	margin-top: -1em;
+	padding-top: 1em;
+}
+
+article.dark {
+	width: 40%;
+	min-width: 26em;
+	max-width: 75%;
+
+	margin-top: -.25em;
+	padding-top: .25em;
+}
+
+div.footer {
+	background-color: #556270;
+	color: #E2E2E2;
+
+	width: 100%;
+
+	font-size: 0pt;
+}
+
+div.footer > .block {
+	display: inline-block;
+
+	text-align: center;
+
+	font-size: 32pt;
+	font-weight: 200;
+
+	padding-top: 0.83em;
+	padding-bottom: 0.83em;
+
+	width: 25%;
+}
+
+div.footer > .block:hover {
+	cursor: pointer;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	color: white;
+	background-color: #333333;
+}
+
+@media (max-height: 720px) {
+	article.about {
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+}
+
+@media (max-width: 1000px) {
+	article.about {
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+
+	div.footer > .block {
+		font-size: 20pt;
+	}
+}
+
+@media (max-width: 640px) {
+	h3 {
+		font-size: 20pt;
+	}
+
+	.title {
+		font-size: 16pt;
+	}
+
+	.date {
+		font-size: 12pt;
+	}
+
+	#events > article > section {
+		margin-bottom: 1em;
+	}
+
+	article.dark {
+		min-width: 90%;
+	}
+
+	div.footer > .block {
+		width: 50%;
+	}
+}
+
+@media (max-width: 480px) {
+	header h1 {
+		font-size: 32pt;
+	}
+
+	header h2 {
+		font-size: 24pt;
+	}
+}
+
+/* workshops */
+
+#workshops {
+	background: url(/images/portfolio.jpg) center center/cover no-repeat scroll;
+}
+
+header.wide {
+	padding-top: 1%;
+	padding-bottom: 20px;
+
+	width: 100%;
+	max-width: none;
+	box-sizing: border-box;
+}
+
+.separator {
+	display: inline-block;
+
+	height: 1px;
+	width: 100%;
+
+	background-color: #555555;
+}
+
+/* journeys */
+
+#journeys {
+	background: url(/images/hackny.jpg) center center/cover no-repeat scroll;
+}
+
+/* create */
+#create {
+	background: url(/images/create.jpg) center center/cover no-repeat scroll;	
+}
+
+/* stories */
+#stories {
+	background: url(/images/stories.jpg) center center/cover no-repeat scroll;	
+}
+
+/* error */
+
+#error {
+	background: url(/images/error.jpg) center center/cover no-repeat scroll;
+}
