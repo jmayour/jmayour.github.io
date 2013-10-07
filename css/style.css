@@ -331,6 +331,10 @@ div.footer > .block:hover {
 		min-width: 90%;
 	}
 
+	header.dark {
+		min-width: 90%;
+	}
+
 	div.footer > .block {
 		width: 50%;
 	}
