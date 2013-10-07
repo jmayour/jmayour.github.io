@@ -101,16 +101,15 @@ h1.logo span.at {
 	background: #336699 url(/images/bg.jpg) center center/cover no-repeat scroll;
 }
 
+#presentation {
+	background: url(/images/bg-short.jpg) center center/cover no-repeat scroll;
+}
+
 #sponsors {
-	/*background: url(/images/bg-short.jpg) center center/cover no-repeat scroll;*/
+	background-color: white;
 }
 
-#sponsors header {
-	margin-top: 0;
-	margin-bottom: 0;	
-}
-
-#sponsors h2 {
+#presentation h2 {
 	padding-top: .83em;
 	padding-bottom: .83em;
 	padding-left: 5%;
@@ -125,6 +124,8 @@ h1.logo span.at {
 
 .sponsors {
 	font-size: 0pt;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 
 .sponsor {
@@ -132,7 +133,8 @@ h1.logo span.at {
 	width: 32.5%;
 	display: inline-block;
 	vertical-align: middle;
-	padding: 8px;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
 }
 
 .sponsor img {
