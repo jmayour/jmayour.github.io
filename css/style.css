@@ -150,7 +150,7 @@ article.dark p {
 }
 
 #journey {
-	background: url(/images/journeys.jpg) center center/cover no-repeat scroll;
+	background: url(/images/journey.jpg) center center/cover no-repeat scroll;
 }
 
 header.dark {
@@ -349,7 +349,7 @@ div.footer > .block:hover {
 /* workshops */
 
 #workshops {
-	background: url(/images/portfolio.jpg) center center/cover no-repeat scroll;
+	background: url(/images/workshops.jpg) center center/cover no-repeat scroll;
 }
 
 header.wide {
@@ -373,7 +373,7 @@ header.wide {
 /* journeys */
 
 #journeys {
-	background: url(/images/hackny.jpg) center center/cover no-repeat scroll;
+	background: url(/images/journeys.jpg) center center/cover no-repeat scroll;
 }
 
 /* create */
