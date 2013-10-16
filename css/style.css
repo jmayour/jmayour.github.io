@@ -322,6 +322,47 @@ div.footer > .block:hover {
 	background-color: #333333;
 }
 
+#social {
+	width: 100%;
+
+	font-size: 0pt;
+}
+
+#social > .block {
+	display: inline-block;
+
+	text-align: center;
+
+	font-size: 32pt;
+	font-weight: 200;
+
+	padding-top: 0.83em;
+	padding-bottom: 0.83em;
+
+	width: 25%;
+
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.block.blue {
+	background-color: #336699;
+	color: white;
+}
+
+.block.blue:hover {
+	background-color: #224466;
+}
+
+.block.red {
+	background-color: #D15462;
+	color: white;
+}
+
+.block.red:hover {
+	background-color: #9E404A;
+}
+
 @media (max-height: 720px) {
 	article.about {
 		background-color: rgba(0, 0, 0, 0.4);
@@ -334,6 +375,10 @@ div.footer > .block:hover {
 	}
 
 	div.footer > .block {
+		font-size: 20pt;
+	}
+
+	div.wrap.no-header#social > .block {
 		font-size: 20pt;
 	}
 }
@@ -364,6 +409,10 @@ div.footer > .block:hover {
 	}
 
 	div.footer > .block {
+		width: 50%;
+	}
+
+	div.wrap.no-header#social > .block {
 		width: 50%;
 	}
 }
