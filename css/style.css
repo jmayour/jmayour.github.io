@@ -240,6 +240,14 @@ strong {
 	font-size: 18pt;
 }
 
+.details {
+	font-size: 16pt;
+	font-weight: 300;
+
+	margin-top: .5em;
+	margin-left: 1em;
+}
+
 article {
 	color: white;
 	font-size: 14pt;
