@@ -98,11 +98,11 @@ h1.logo span.at {
 }
 
 #intro {
-	background: #336699 url(/images/bg.jpg) center center/cover no-repeat scroll;
+	background: #336699 url(../images/bg.jpg) center center/cover no-repeat scroll;
 }
 
 #presentation {
-	background: url(/images/bg-short.jpg) center center/cover no-repeat scroll;
+	background: url(../images/bg-short.jpg) center center/cover no-repeat scroll;
 }
 
 #sponsors {
@@ -143,7 +143,7 @@ h1.logo span.at {
 }
 
 #events {
-	background: #556270 url(/images/events.jpg) center center/cover no-repeat fixed;
+	background: #556270 url(../images/events.jpg) center center/cover no-repeat fixed;
 }
 
 .dark {
@@ -163,7 +163,7 @@ article.dark p {
 }
 
 #journey {
-	background: #336699 url(/images/journey.jpg) center center/cover no-repeat scroll;
+	background: #336699 url(../images/journey.jpg) center center/cover no-repeat scroll;
 }
 
 header.dark {
@@ -389,6 +389,12 @@ div.footer > .block:hover {
 	font-size: 16pt;
 }
 
+.profile-img {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
 @media (max-height: 720px) {
 	article.about {
 		background-color: rgba(0, 0, 0, 0.4);
@@ -464,7 +470,7 @@ div.footer > .block:hover {
 /* workshops */
 
 #workshops {
-	background: url(/images/workshops.jpg) center center/cover no-repeat scroll;
+	background: url(../images/workshops.jpg) center center/cover no-repeat scroll;
 }
 
 header.wide {
@@ -488,29 +494,29 @@ header.wide {
 /* journeys */
 
 #journeys {
-	background: url(/images/journeys.jpg) center center/cover no-repeat scroll;
+	background: url(../images/journeys.jpg) center center/cover no-repeat scroll;
 }
 
 /* create */
 #create {
-	background: url(/images/create.jpg) center center/cover no-repeat scroll;
+	background: url(../images/create.jpg) center center/cover no-repeat scroll;
 }
 
 /* stories */
 #stories {
-	background: url(/images/stories.jpg) center center/cover no-repeat scroll;
+	background: url(../images/stories.jpg) center center/cover no-repeat scroll;
 }
 
 /* error */
 
 #error {
-	background: url(/images/error.jpg) center center/cover no-repeat scroll;
+	background: url(../images/error.jpg) center center/cover no-repeat scroll;
 }
 
 
 /* hackcooper */
 #hackcooper {
-	background-image: url(/images/hackcooper/41cs.jpg);
+	background-image: url(../images/hackcooper/41cs.jpg);
 	background-position: center center;
 	background-size: cover;
 	text-align: center;
