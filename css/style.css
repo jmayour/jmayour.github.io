@@ -372,6 +372,23 @@ div.footer > .block:hover {
 	background-color: #9E404A;
 }
 
+.team {
+	font-size: 0pt;
+	margin-bottom: 20px;
+}
+.teammate {
+	display: inline-block;
+	width: 33.3%;
+	font-size: 16pt;
+	margin-bottom: 2em;
+}
+.teammate img {
+	width: 33.3%;
+}
+.team p {
+	font-size: 16pt;
+}
+
 @media (max-height: 720px) {
 	article.about {
 		background-color: rgba(0, 0, 0, 0.4);
@@ -389,6 +406,10 @@ div.footer > .block:hover {
 
 	div.wrap.no-header#social > .block {
 		font-size: 20pt;
+	}
+
+	.teammate {
+		width: 50%;
 	}
 }
 
@@ -423,6 +444,10 @@ div.footer > .block:hover {
 
 	div.wrap.no-header#social > .block {
 		width: 50%;
+	}
+
+	.teammate {
+		width: 80%;
 	}
 }
 
