@@ -389,12 +389,6 @@ div.footer > .block:hover {
 	font-size: 16pt;
 }
 
-.profile-img {
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-}
-
 @media (max-height: 720px) {
 	article.about {
 		background-color: rgba(0, 0, 0, 0.4);
