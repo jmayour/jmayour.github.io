@@ -23,6 +23,7 @@ a:hover, a:active {
 }
 
 p {
+	font-family: 'ratio';
 	font-weight: 300;
 }
 
@@ -37,6 +38,7 @@ header {
 }
 
 h2 {
+	font-family: 'enzo';
 	font-size: 32pt;
 	font-weight: 200;
 }
@@ -89,12 +91,14 @@ li p {
 
 h1.logo {
 	color: #EEEEEE;
+	font-family: 'coconpro';
 }
 
 h1.logo span.at {
 	color: #D15462;
 	display: inline-block;
 	padding-bottom: -4px;
+	font-family: 'coconpro';
 }
 
 #intro {

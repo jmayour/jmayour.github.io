@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'enzo';
+    src: url('./fonts/fontfont_-_enzopro-light-webfont.eot');
+    src: url('./fonts/fontfont_-_enzopro-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/fontfont_-_enzopro-light-webfont.woff') format('woff'),
+         url('./fonts/fontfont_-_enzopro-light-webfont.ttf') format('truetype'),
+         url('./fonts/fontfont_-_enzopro-light-webfont.svg#enzo_prolight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ratio';
+    src: url('./fonts/psratio_light-webfont.eot');
+    src: url('./fonts/psratio_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/psratio_light-webfont.woff') format('woff'),
+         url('./fonts/psratio_light-webfont.ttf') format('truetype'),
+         url('./fonts/psratio_light-webfont.svg#ratio_lightlight') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'coconpro';
+    src: url('./fonts/fontfont_-_coconpro-regular-webfont.eot');
+    src: url('./fonts/fontfont_-_coconpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/fontfont_-_coconpro-regular-webfont.woff') format('woff'),
+         url('./fonts/fontfont_-_coconpro-regular-webfont.ttf') format('truetype'),
+         url('./fonts/fontfont_-_coconpro-regular-webfont.svg#coconpro-regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.tk-ff-cocon-web-pro {
+	font-family: 'coconpro';
+}
+
+.tk-ff-enzo-web {
+	font-family: 'enzo';
+}
+
+.tk-ratio {
+	font-family: 'ratio';
+}
