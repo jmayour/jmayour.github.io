@@ -173,7 +173,9 @@ body {
 
 #photo-frame-1 {
 	background-image: url('../img/sf-2.jpg');
+	background-size: 70%;
 }
+
 
 #photo-frame-2 {
   background-position: center center;
