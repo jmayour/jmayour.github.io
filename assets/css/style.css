@@ -151,7 +151,7 @@ body {
 /* SPECIFIC CAPTIONS */
 
 #home-caption {
-  right: 5%;
+  left: 5%;
 	position: fixed;
 }
 
