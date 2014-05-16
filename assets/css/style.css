@@ -173,7 +173,7 @@ body {
 
 #photo-frame-1 {
 	background-image: url('../img/sf-2.jpg');
-	background-size: 70%;
+	background-size: cover;
 }
 
 
