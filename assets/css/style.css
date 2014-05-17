@@ -62,11 +62,11 @@ body {
 
 /* SPECIFIC LIS */
 #navhome {
-	background-color: #96E266;
+	background-color: #27408B;
 }
 
 #navprojects {
-	background-color: #50BBF3;
+	background-color: #6495ED;
 }
 
 #navadv {
@@ -74,7 +74,7 @@ body {
 }
 
 #navme {
-	background-color: #F9F162;
+	background-color: #B0C4DE;
 }
 
 /* FRAMES
@@ -243,8 +243,13 @@ body {
 /* IMAGE CONTAINERS */
 
 .horizontal-1 {
-  width: 400px;
-  height: 300px;
+  width: 600px;
+  height: 400px;
+}
+
+.horizontal-1-a {
+  width: 450px;
+  height: 600px;
 }
 
 .horizontal-2 {
