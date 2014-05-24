@@ -149,6 +149,57 @@ body {
 	font-size: 14pt;
 }
 
+
+.frame-caption-a {
+  position: static;
+  max-width: 600px;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 4px;
+  padding: 5px 20px;
+  margin-top: 635px;
+  margin-right: 30px;
+}
+
+.frame-caption-a-sub {
+  background-color: rgba(0,0,0,0.8);
+  position: absolute;
+  padding: 0 20px;
+  margin-top: 53%;
+  margin-left: 0;
+  left: 0;
+}
+
+.frame-caption-a h1,
+.frame-caption-a .lead {
+  margin: 0;
+  line-height: 1.25;
+  font-size: 24px;
+  color: #fff;
+  padding: 5px 0;
+}
+
+
+.frame-caption-a h1,
+.frame-caption-a h1 a {
+  font-size: 24px;
+  font-weight: normal;
+  color: white;
+  padding: 2px 15px;
+}
+
+.frame-caption-a .lead {
+  /*padding-bottom: 5px;*/
+}
+
+.frame-caption-a .btn {
+  margin-top: 10px;
+}
+
+.frame-caption-a-sub .lead {
+  font-size: 14pt;
+}
+
+
 /* SPECIFIC CAPTIONS */
 
 #home-caption {
@@ -162,7 +213,12 @@ body {
 }
 
 #me-caption {
-  right: 8%;
+  right: 11%;
+  position: fixed;
+}
+
+#me-caption-a {
+  right: 2%;
   position: fixed;
 }
 
@@ -394,6 +450,12 @@ body {
     position: fixed;
   }
 
+  #me-caption-a {
+  left: 0;
+  margin-top: 200px;
+  position: fixed;
+  }
+
 
   .featurette {
     height: auto;
@@ -463,5 +525,9 @@ body {
 
   #me-caption {
     margin-top: 175px;
+  }
+
+  #me-caption-a {
+    margin-top: 15px;
   }
 }
