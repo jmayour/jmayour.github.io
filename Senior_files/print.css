@@ -1,0 +1,114 @@
+a:link:after,
+a:visited:after {
+	content: '';
+}
+
+body {
+	color: #000000;
+	font-family: 'Arial','Helvetica',sans-serif;
+	font-size: 12px;
+	letter-spacing: 0px;
+	line-height: normal;
+}
+
+header {
+	display: none;
+}
+
+#mainnav {
+	display: none;
+}
+
+#content {
+	margin: 0px;
+	width: auto;
+}
+
+#content * {
+	color: #000000;
+	font-family: 'Arial','Helvetica',sans-serif;
+	letter-spacing: 0px;
+	line-height: normal;
+}
+
+#container1 {
+	border: none;
+	float: none;
+	position: static;
+	width: auto;
+}
+
+#container2 {
+	background: none;
+	clear: both;
+	float: none;
+	overflow: hidden;
+	position: static;
+	width: auto;
+}
+
+#side {
+	display: none;
+}
+
+#main {
+	background: none;
+	float: none;
+	left: 0px;
+	padding: 0px;
+	position: static;
+	width: auto;
+}
+
+#breadcrumbs {
+	float: none;
+	margin: 0px;
+	overflow: hidden;
+	width: auto;
+}
+
+#breadcrumbs a {
+	color: #000000;
+}
+
+article {
+	min-height: 0px;
+	padding: 0px;
+}
+
+article h1,
+article h1.large {
+	font-size: 24px;
+	margin: 20px 0px;
+}
+
+article .body {
+	float: none;
+	margin: 0px;
+	padding: 0px;
+	width: auto;
+}
+
+article aside {
+	display: none;
+}
+
+#history {
+	display: none;
+}
+
+footer .top,
+footer .bottom, 
+footer .copyright .bar,
+footer .copyright .bar a {
+	display: none;
+}
+
+footer .copyright {
+	padding-left: 0;
+    text-align: left;
+}
+
+.events .group-list {
+	display: none;
+}
