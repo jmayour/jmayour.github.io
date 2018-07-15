@@ -156,7 +156,7 @@ body {
   background-color: rgba(0,0,0,0.6);
   border-radius: 4px;
   padding: 5px 20px;
-  margin-top: 635px;
+  margin-top: 435px;
   margin-right: 30px;
 }
 
@@ -203,7 +203,7 @@ body {
 /* SPECIFIC CAPTIONS */
 
 #home-caption {
-  left: 5%;
+  left: -1%;
 	position: fixed;
 }
 
@@ -225,7 +225,7 @@ body {
 /* SPECIFIC FRAMES */
 
 #home-frame {
-	background-image: url('../img/bball.jpg');
+	background-image: url('../img/home.jpg');
 }
 
 #photo-frame-1 {
@@ -245,7 +245,7 @@ body {
 }
 
 #me-frame {
-  background-image: url('../img/bball.jpg');
+  background-image: url('../img/aboutme.jpg');
 }
 
 .divider {
