@@ -102,12 +102,12 @@ body {
 
 .frame-caption {
   position: static;
-  max-width: 450px;
+  max-width: 600px;
   background-color: rgba(0,0,0,0.6);
   border-radius: 4px;
   padding: 5px 20px;
   margin-top: 210px;
-  margin-left: 50px;
+  margin-left: 400px;
 }
 
 .frame-caption-sub {
@@ -157,7 +157,7 @@ body {
   border-radius: 4px;
   padding: 5px 20px;
   margin-top: 435px;
-  margin-right: 30px;
+  margin-right: 125px;
 }
 
 .frame-caption-a-sub {
@@ -181,10 +181,10 @@ body {
 
 .frame-caption-a h1,
 .frame-caption-a h1 a {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: normal;
   color: white;
-  padding: 2px 15px;
+  padding: 5px 0px;
 }
 
 .frame-caption-a .lead {
