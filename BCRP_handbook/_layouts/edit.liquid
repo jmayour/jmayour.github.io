@@ -1,0 +1,197 @@
+<div data-role="header">
+  <a data-icon="back"
+    {% if page.new %}
+      data-rel="back"
+    {% else %}
+      href="/{{ page.name | escape }}{% if approving %}/{{ page.metadata.author | escape }}{% endif %}"
+    {% endif %}>Back</a>
+  <h1>{% if page.new %}Creating{% elsif approving %}Merging{% else %}Editing{% endif %} /{{ page.name }}</h1>
+  
+  {% if just_auth %}
+    {% if email and email != '' %}
+  <div class="ui-body ui-bar-e auth-flash">Thanks for logging in, {{ email }}</div>
+    {% else %}
+  <div class="ui-body ui-bar-e auth-flash">You have been logged out</div>
+    {% endif %}
+  {% endif %}
+</div>
+  
+<div data-role="content" class="page-editor">
+  
+{% if page.conflicts %}
+  <div class="ui-body ui-bar-e">
+    Some recent edits from the approved version could not be merged.  You should <a href="/{{ page.name }}" target="_blank">review the approved version</a> carefully.
+  </div>
+{% endif %}
+  
+<div class="editor-form-cont">
+  <form method="post" action="/{{ page.name }}" enctype="multipart/form-data" data-ajax="false" accept-charset="utf-8">
+    <p>
+      <label for="{{ page.name | escape }}-title" class="ui-hidden-accessible">Title</label>
+      <input type="text" name="title" id="{{ page.name }}-title" class="edit-title" value="{{ page.metadata.title }}" 
+        placeholder="Title"/>
+    </p>
+    <p>
+      <label for="{{ page.name | escape }}-body" class="ui-hidden-accessible">Content</label>
+      <textarea name="body" rows="30" style="width: 100%" 
+        class="never-focused mdown-editor">{{ page.body | escape }}</textarea>
+    </p>
+    <div data-role="collapsible" data-content-theme="c">
+      <h2 class="add-image-collapsible">Adding images and files</h2>
+      <ul class="upload-list">
+        {% for u in uploads %}
+          {% if u.is_image %}
+          <li><a href="javascript:void(0)" data-role="button" data-shadow="false" class="insert-image"
+            title="{{ u.name }}">
+            <img src="/uploads/{{ u.name }}"/></a></li>
+          {% else %}
+          <li><a href="javascript:void(0)" data-is-file="true" data-role="button" data-shadow="false" class="insert-image"
+            title="{{ u.name }}" data-img-href="/uploads/{{ u.name }}">
+            <img class="file-icon" src="/images/icons/{{ u.ext }}.png"/><span class="file-name">{{ u.name }}</span></a></li>
+          {% endif %}
+        {% endfor %}
+        <li><a href="javascript:void(0)" class="input-file-button" data-role="button" data-theme="b">Upload&hellip;</a></li>
+      </ul>
+      <input type="file" name="tmp-image" class="file-input-target input-hide"/>
+    </div>
+    <div data-role="fieldcontain">
+      <label for="{{ page.name | escape }}-template">Template</label>
+      <select name="template" id="{{ page.name | escape }}-template" class="select-template">
+        {% for t in templates %}
+        <option value="{{ t.name }}"{% if page.metadata.template == t.name %} selected{% endif %}>{{ t.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div data-role="fieldcontain">
+      <label for="{{ page.name | escape }}-backlink">Back link</label>
+      <select name="backlink" id="{{ page.name | escape }}-backlink" class="select-backlink">
+        <option value=""{% if !page.metadata.backlink or page.metadata.backlink == "" %} selected{% endif %}
+            >login/logout button</option>
+        {% for f in footer_links %}
+        <option value="{{ f.page }}"{% if page.metadata.backlink == f.page %} selected{% endif %}>{{ f.title }} - /{{ f.page }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    {% if is_editor %}
+    <div data-role="fieldcontain">
+      <label for="{{ page.name | escape }}-owner">Page owner</label>
+      <select name="owner" id="{{ page.name | escape }}-owner" class="select-editor">
+        {% for ed in editors %}
+        <option value="{{ ed }}"{% if page.metadata.owner == ed %} selected{% endif %}>{{ ed }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    {% endif %}
+
+    {% if is_editor %}
+    <div data-role="fieldcontain">
+      <label for="{{ page.name | escape }}-accessibility">Visible to</label>
+      <select name="accessibility" id="{{ page.name | escape }}-accessibility" class="select-editor">
+        {% for lvl in page_levels %}
+        <option value="{{ lvl[0] }}"{% if page.metadata.accessibility == lvl[0] %}selected{% endif %}>{{ lvl[1] }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    {% else %}
+    <div class="metadata">
+      <p class="accessibility">
+        <b>Visible to: </b>{% if page.metadata.accessibility %}{{ page_levels[page.metadata.accessibility] }}{% else %}{{ page_levels.public }}{% endif %}
+      </p>
+    </div>
+    {% endif %}
+    <div class="metadata">
+      {% if page.metadata.author and page.metadata.author != '' %}
+      <p class="authorship">
+        Last edited by <span class="author">{{ page.metadata.author }}</span><span class="when">
+          {{ page.metadata.last_modified | ago }}</span>.
+      </p>
+      {% endif %}
+      {% unless is_editor %}
+      <p class="ownership">
+        <span class="owner">{% if page.metadata.owner %}{{ page.metadata.owner }}{% else %}{{ editors | first }}{% endif %}</span>
+        must approve all changes to this page by non-editors.
+      </p>
+      {% endunless %}
+    </div>
+    
+    {% if approving %}
+    <input type="hidden" name="approving" value="{{ page.metadata.author | escape }}"/>
+    {% endif %}
+    <fieldset class="ui-grid-a">
+      <div class="ui-block-a"><a class="cancel" href="/{{ page.name }}" data-role="button">Cancel</a></div>
+      <div class="ui-block-b">
+        <input type="hidden" name="_csrf" value="{{ csrf_token }}">
+        {% if approving %}
+        <input type="submit" data-theme="e" value="Save &amp; merge"/>
+        {% else %}
+        <input type="submit" data-theme="e" value="Save edits"/>
+        {% endif %}
+      </div>	   
+    </fieldset>
+    {% if commit_list != null %}
+    <div data-role="collapsible" data-content-theme="c">
+      <h2 class="add-history-collapsible">View History</h2>
+      <ul class="history-list">
+        {% for commit in commit_list %}
+          <li><button id="{{commit.id}}" class="history-btn" {%if commit.new_file%}{%assign nomore = true%}data-theme="a"{%endif%}>
+            Editor: <span class="button-secondary">{{commit.author}}</span>
+            Edited: <span class="button-secondary">{{commit.authored}}</span><br/>
+            Committer: <span class="button-secondary">{{commit.commiter}}</span>
+            Committed: <span class="button-secondary">{{commit.commited}}</span></button></li>
+        {% endfor %}
+        {% if nomore == null %}
+          <li><button id="history-more-btn">More...</button></li>
+        {% endif %}
+        <script>var page_name = "{{page.name}}"</script>
+      </ul>
+    </div>
+    {% endif %}
+  </form>
+</div>
+
+<div class="examples">
+  <div data-role="collapsible" data-theme="c">
+    <h2>Guide for the <span class="template-name">{{ page.metadata.template }}</span> template</h2>
+    {% for t in templates %}
+    <div class="examples-list examples-{{ t.name }}{% if page.metadata.template == t.name %} examples-active{% endif %}">
+      {% if t.examples == null or t.examples == empty %}
+      <div class="no-help-yet">This template does not have any examples yet, sorry!</div>
+      {% else %}
+        {% for ex in t.examples %}
+      <div class="example-pair clear">
+        <div class="mdown">
+          <div class="help-text">Write this&hellip;</div>
+          <pre class="code ui-body ui-body-c">{{ ex.mdown | escape }}</pre>
+        </div>
+        <div class="html">
+          <div class="help-text">to make this</div>
+          <div class="content-preview">{{ ex.html }}</div>
+        </div>
+      </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  <div class="clear"></div>
+  <div data-role="collapsible" data-theme="c">
+    <h2>General formatting guide</h2>
+    <div class="examples-list examples-always-active">
+      {% for ex in mdown_examples %}
+      <div class="example-pair clear">
+        <div class="mdown">
+          <div class="help-text">Write this &hellip;</div>
+          <pre class="code ui-body ui-body-c">{{ ex.mdown }}</pre>
+        </div>
+        <div class="html">
+          <div class="help-text">to make this</div>
+          <div class="content-preview">{{ ex.html }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+
+</div><!-- /content -->

@@ -1,0 +1,25 @@
+<div data-role="header" class="{% if page.on_branch %}on-branch{% endif %}">
+  <a class="ui-btn-left" data-icon="back" data-rel="back">Back</a>
+  <h1>{{ default_title }}</h1>
+  <a class="ui-btn-right" data-theme="" href="/{{ page.name }}/edit" data-icon="pencil">Create</a>
+  
+  {% if just_auth %}
+    {% if email and email != '' %}
+  <div class="ui-body ui-bar-e auth-flash">Thanks for logging in, {{ email }}</div>
+    {% else %}
+  <div class="ui-body ui-bar-e auth-flash">You have been logged out</div>
+    {% endif %}
+  {% endif %}
+</div><!-- /header -->
+
+<div data-role="content">
+
+<h1>Page not found</h1>
+<div id="#content">
+  <p class="one-button-message">
+    No page yet exists at <strong>/{{ page.name | escape }}</strong>.
+  </p>
+  <a href="/{{ page.name }}/edit" data-role="button">Create this page</a>
+</div>
+
+</div><!-- /content -->

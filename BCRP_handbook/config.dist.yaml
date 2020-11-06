@@ -1,0 +1,154 @@
+# This is a sample configuration file for the EHHAPP
+#
+# Before running the EHHapp, copy this to config.yaml and customize.
+
+# Where is the git repository that contains the wiki pages?
+# To use the default here,
+#     mkdir ehhapp-data && (cd ehhapp-data && git init)
+repo: ./ehhapp-data
+
+# Authentication settings go in this big block
+auth:
+    # Should we use authentication before pages can be edited?
+    enabled: yes
+
+    # What are the allowed domains for the email addresses that will be
+    # used to authenticate users?
+    # NOTE: in any cases where just a username was recorded (legacy format), the first mail domain is assumed
+    #   see lib/auth.rb --> Sinatra::EmailAuth::Helpers#emailify
+    mail_domain: 
+    - mssm.edu
+    - icahn.mssm.edu
+
+    # Where do auth emails come from?
+    mail_from: example@example.edu
+    # Where will they bounce to (when people enter in invalid addresses)?
+    mail_bounce: example@example.edu
+    # Usernames need to match this regexp.  One detail is that usernames also need to be valid as
+    # part of a git reference: https://www.kernel.org/pub/software/scm/git/docs/git-check-ref-format.html
+    username_regexp: !ruby/regexp /^[\w_-`]+(\.[\w_-`]+)*$/
+
+    # What to put in the email message
+    mail_body: |
+        Hello there!
+        
+        You (or somebody claiming to be you) is attempting to edit 
+        the EHHapp (at http://ehhapp.org).  If this was you, please 
+        return to the login screen and enter this six-digit code:
+        
+        %s
+        
+        ...and then you will have access to page editor!
+        
+        Cheers,
+        The EHHapp team
+
+    # Where do we want to store lockouts, attempts, etc.?
+    # It is stored in a Ruby PStore, by default in Dir.tmpdir, but this can be changed
+    # to another location by specifying an absolute path here
+    pstore_filename: ehhapp_emailauth.pstore
+
+    # Minimum amount of time between issuing keys for a user, in seconds
+    key_issue_interval: 300
+    # Time until a key expires
+    key_expiration_interval: 600
+    # The maximum number of failures allowed, and within how many seconds, before a lockout occurs
+    max_failures: 2
+    max_failures_interval: 600
+    # How long a lockout is, in seconds
+    lockout_interval: 1800
+
+    # What email addresses are allowed to edit all pages and approve changes?
+    # Users that are not editors will be able to submit changes, but not
+    # approve them, or be designated as editors for a page.
+    # The first user in this list is the default editor for all new pages.
+    editors:
+    - example.one@example.com
+    - example.two@example.com
+    
+    # Can non-editors save changes to topic branches?
+    non_editor_forking: no
+
+default_title: EHHapp
+
+touch_icon: /images/ehhapp.png
+
+google_analytics: TRACKINGID
+
+footer_links:
+    - {icon: "info", title: "FAQ", page: "FAQ"}
+    - {icon: "phone", title: "Contact", page: "phone"}
+    - {icon: "fahome", title: "Home", page: "index"}
+    - {icon: "faplus", title: "Rx", page: "Formulary"}
+    - {icon: "file", title: "Docs", page: "documents"}
+
+fork_notify_message: |
+    Guess what!
+    
+    %s has submitted changes to a page that you own 
+    on the EHHapp.  To review them, click on the following link:
+    
+    %s
+    
+    and you will be able to view, edit, and approve them.
+    
+    You *must* approve them before they will be available publicly to
+    other users of the EHHapp.
+    
+    Cheers,
+    The EHHapp team
+
+fork_accepted_message: |
+    Great news!
+    
+    %s has approved changes that you submitted 
+    to the EHHapp.  You will be able to see the final completed page
+    at the following link:
+    
+    %s
+    
+    Cheers,
+    The EHHapp team
+
+# Some relevant examples to help people learn Markdown quickly.
+
+mdown_examples:
+    - |
+       It's **bold text** and _italic text_.
+    
+       Two returns creates a new paragraph.
+       Without two returns, the paragraph
+       keeps flowing.
+    
+    - |
+       If you need a line break in the middle
+       of a paragraph, type two spaces before
+       hitting return at the end of the line:
+       
+       17 East 102nd St.<span class="hilite">  </span>  
+       New York, NY 10029
+    
+    - |
+        # Big header.
+
+        ## Smaller header.
+        
+    - |
+        [A link](http://ehhapp.org).
+        [A link to a phone number](tel:+18773724161).
+
+    - |
+        How to make bulleted lists:
+
+        * Two returns, then
+        * Use
+        * Asterisks
+        * Before each item.
+    
+    - |
+        And finally numerical lists:
+    
+        1. Start them like so
+        2. Even though you use numbers
+        1. They can be the wrong ones
+        1. and it still works OK.
