@@ -1,5 +1,4 @@
 AuthName "Restricted Area" 
 AuthType Basic 
-AuthUserFile /BCRP2019/.htpasswd 
-AuthGroupFile /dev/null 
+AuthUserFile /BCRP2019/.htpasswd
 require valid-user
