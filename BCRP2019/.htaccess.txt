@@ -1,4 +1,5 @@
+AuthName "Restricted Area" 
 AuthType Basic 
-AuthName “restricted area”
-AuthUserFile /Users/jmayour/Documents/GitHub/jmayour.github.io/BCRP2019/.htpasswd
+AuthUserFile joshuamayourian.com/BCRP2019/.htpasswd 
+AuthGroupFile /dev/null 
 require valid-user
