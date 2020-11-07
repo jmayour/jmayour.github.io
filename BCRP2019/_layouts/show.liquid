@@ -1,0 +1,12 @@
+<div data-role="header"
+  {{ header }}
+</div>
+
+<div data-role="content">
+
+<h1>/{{ page.name | escape }}</h1>
+<div id="#content">
+  {{ page.to_html }}
+</div>
+
+</div><!-- /content -->
