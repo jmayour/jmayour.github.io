@@ -1,5 +1,5 @@
 AuthName "Restricted Area" 
 AuthType Basic 
-AuthUserFile http://www.joshuamayourian.com/BCRP2019/.htpasswd 
+AuthUserFile /BCRP2019/.htpasswd 
 AuthGroupFile /dev/null 
 require valid-user
