@@ -1,104 +1,134 @@
-<!DOCTYPE html> 
-<html> 
-	<head> 
-	<title>BCRP Handbook 2019</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
-	<link rel="apple-touch-icon-precomposed" href="images/ehhapp.png" />
-	<meta name="apple-mobile-web-app-capable" content="yes" /> 
-	<meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
-	<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
-	<link rel="stylesheet" href="css/app.css" />
-	<link rel="stylesheet" href="add2home.css">
-	<script src="js/jquery-1.8.2.min.js"></script>
-	<script src="js/jquery.mobile-1.2.0.min.js"></script>
-	<script src="js/app.js"></script>
-	<script type="application/javascript" src="add2home.js"></script>
-</head> 
-<body> 
 
-<div data-role="page" id="cacheMe" data-dom-cache="true">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
 
-<div data-role="footer" data-id="nav" data-position="fixed">
-	<div data-role="navbar">
-		<ul>
-			<li><a href="Intro.html" data-icon="intro" data-prefetch>Intro</a></li>
-			<li><a href="Rapid Reference.html" data-icon="RapidReference" data-prefetch>Rapid Reference</a></li>
-			<li><a href="OrganSystems.html" class="ui-state-persist ui-btn-active" data-icon="OrganSystems" data-iconpos="notext">Organ Systems</a></li>
-			<li><a href="Rotations.html" data-icon="Rotations" data-prefetch>Rotations</a></li>
-			<li><a href="TipCard.html" data-icon="TipsandCards" data-prefetch>Tips and Cards</a></li>
-		</ul>
-	</div><!-- /navbar -->
-</div>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div data-role="content">
-	<ul data-role="listview" data-inset="false" data-filter="true" data-filter-placeholder="System..."  data-theme="d">
-		<li data-role="list-divider">Adolescent Medicine</li>
-		<li><a href="bills.html" data-prefetch>Clinic/Ward Tips</a></li>
-		<li><a href="insurance.html" data-prefetch>HEADS Assessment</a></li>
-		<li><a href="insurance.html" data-prefetch>Contraception (Emergency Contraception*)</a></li>
-		<li><a href="BariumSwallow.html" data-prefetch>Tanner Staging</a></li>
-		<li><a href="Mammo.html" data-prefetch>Vaginal Discharge and Infections</a></li>
-		<li><a href="Carotid_Ultrasound.html" data-prefetch> Genital Ulcers and Warts</a></li>
-		<li><a href="CT.html" data-prefetch>PID</a></li>
-		<li><a href="DEXA.html" data-prefetch>Heavy or Irregular Menstrual Bleeding</a></li>
-		<li><a href="Cardiology.html" data-prefetch> Amenorrhea</a></li>
-		<li><a href="Mammo.html" data-prefetch>Mammogram</a></li>
-		<li><a href="MRI.html" data-prefetch>Eating Disorders</a></li>
-		<li data-role="list-divider" data-prefetch>Critical Care/ICP</li>
-		<li><a href="AsymColon.html" data-prefetch>Pain Control and Sedation</a></li>
-		<li><a href="Cardiology.html" data-prefetch>Ventilation</a></li>
-		<li><a href="Cardiac_Holter.html" data-prefetch>ARDS</a></li>
-		<li><a href="Cardiac_Stress.html" data-prefetch>Shock</a></li>
-		<li><a href="Dentistry.html" data-prefetch>Vasopressors and Ionotropes</a></li>
-		<li><a href="Derm.html" data-prefetch>Hypertensive Crisis</a></li>
-		<li><a href="ENT.html" data-prefetch>ECMO Basics</a></li>
-		<li data-role="list-divider">Emergency Department</li>
-		<li><a href="EHHOPtho.html" data-prefetch>Acute Abdominal Pain</a></li>
-		<li><a href="EHHOPMH.html" data-prefetch>Acute Chest Pain</a></li>
-		<li><a href="EHHOPGyn.html" data-prefetch>Acute Scrotal Pain</a></li>
-		<li><a href="ehhopcardiology.html" data-prefetch>Atraumatic Limp</a></li>
-		<li><a href="nursingcare.html" data-prefetch>Bites</a></li>
-        <li><a href="EHHOPtho.html" data-prefetch>BRUE</a></li>
-        <li><a href="EHHOPMH.html" data-prefetch>Burns</a></li>
-        <li><a href="EHHOPGyn.html" data-prefetch>Cervical Spine Injury</a></li>
-        <li><a href="ehhopcardiology.html" data-prefetch>Deep Neck Space Infections</a></li>
-        <li><a href="EHHOPtho.html" data-prefetch>Dehydration</a></li>
-        <li><a href="EHHOPMH.html" data-prefetch>Dental Emergencies</a></li>
-        <li><a href="EHHOPGyn.html" data-prefetch>Epistaxis</a></li>
-        <li><a href="ehhopcardiology.html" data-prefetch>Febrile Infant</a></li>
-        <li><a href="nursingcare.html" data-prefetch>Foreign Body Airway</a></li>
-        <li><a href="EHHOPtho.html" data-prefetch>Foreign Body GI</a></li>
-        <li><a href="EHHOPMH.html" data-prefetch>Laceration Repair</a></li>
-        <li><a href="EHHOPGyn.html" data-prefetch>TBI</a></li>
-        <li><a href="ehhopcardiology.html" data-prefetch>Sexual Assault</a></li>
-        <li><a href="nursingcare.html" data-prefetch>Suspected Child Abuse</a></li>
-        <li><a href="EHHOPtho.html" data-prefetch>Syncope</a></li>
-        <li><a href="EHHOPMH.html" data-prefetch>Trauma</a></li>
-        <li data-role="list-divider">Emergency Department</li>
-        <li><a href="EHHOPtho.html" data-prefetch>Acute AbdominalPain</a></li>
-        <li><a href="EHHOPMH.html" data-prefetch>Acute Chest Pain</a></li>
-        <li><a href="EHHOPGyn.html" data-prefetch>Acute Scrotal Pain</a></li>
-        <li><a href="ehhopcardiology.html" data-prefetch>Atraumatic Limp</a></li>
-        <li><a href="nursingcare.html" data-prefetch>Bites</a></li>
-        <li><a href="EHHOPtho.html" data-prefetch>BRUE</a></li>
-        <li><a href="EHHOPMH.html" data-prefetch>Burns</a></li>
-        <li><a href="EHHOPGyn.html" data-prefetch>Cervical Spine Injury</a></li>
-        <li><a href="ehhopcardiology.html" data-prefetch>Deep Neck Space Infections</a></li>
-        <li><a href="EHHOPtho.html" data-prefetch>Dehydration</a></li>
-        <li><a href="EHHOPMH.html" data-prefetch>Dental Emergencies</a></li>
-        <li><a href="EHHOPGyn.html" data-prefetch>Epistaxis</a></li>
-        <li><a href="ehhopcardiology.html" data-prefetch>Febrile Infant</a></li>
-        <li><a href="nursingcare.html" data-prefetch>Foreign Body Airway</a></li>
-        <li><a href="EHHOPtho.html" data-prefetch>Foreign Body GI</a></li>
-        <li><a href="EHHOPMH.html" data-prefetch>Laceration Repair</a></li>
-        <li><a href="EHHOPGyn.html" data-prefetch>TBI</a></li>
-        <li><a href="ehhopcardiology.html" data-prefetch>Sexual Assault</a></li>
-        <li><a href="nursingcare.html" data-prefetch>Suspected Child Abuse</a></li>
-        <li><a href="EHHOPtho.html" data-prefetch>Syncope</a></li>
-        <li><a href="EHHOPMH.html" data-prefetch>Trauma</a></li>
-    </ul>
-	</div><!-- /content -->
-</div><!-- /page -->
+</head>
+
+<style>
+
+body {
+
+	background-image: url('grunge_patterns.jpg');
+	background-attachment: fixed;
+	color: #333;
+}
+
+.box {
+	border-radius: 3px;
+	background: rgba(101, 101, 101, 0.7); margin: auto; padding: 12px;
+}
+
+.lightbox {
+	zoom: 1.5;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(10, 10, 10, 0.8);
+	text-align: center;
+	margin: auto;
+
+}
+
+div.horizontal {
+	display: flex;
+	justify-content: center;
+	height: 100%;
+}
+
+div.vertical {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+}
+
+::-webkit-input-placeholder {
+   color: #955;
+   text-align: center;
+}
+
+::-moz-placeholder {
+   color: #955;
+   text-align: center;
+}
+
+:-ms-input-placeholder {
+   color: #955;
+   text-align: center;
+}
+
+</style>
+
+<body>
+
+	<div id="loginbox" class="lightbox" >
+		<div class="horizontal">
+			<div class="vertical">
+				<div class="box">
+					<input style="margin: 16px; text-align: center;" id="password" type="password" placeholder="password" /> <br />
+					<button id="loginbutton" type="button">Enter</button>
+					<p id="wrongPassword" style="display: none">wrong password</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+
+	 <script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
+
+	<script type="text/javascript">
+	"use strict";
+
+
+	function loadPage(pwd) {
+
+		var hash= pwd;
+		hash= Sha1.hash(pwd);
+		var url= hash + "/index.html";
+
+		$.ajax({
+			url : url,
+			dataType : "html",
+			success : function(data) {
+
+				window.location= url;
+
+			},
+			error : function(xhr, ajaxOptions, thrownError) {
+
+
+				parent.location.hash= hash;
+
+				//$("#wrongPassword").show();
+				$("#password").attr("placeholder","wrong password");
+				$("#password").val("");
+			}
+		});
+	}
+
+
+	$("#loginbutton").on("click", function() {
+		loadPage($("#password").val());
+	});
+	$("#password").keypress(function(e) {
+		if (e.which == 13) {
+
+			loadPage($("#password").val());
+		}
+	});
+	$("#password").focus();
+
+	</script>
+
 </body>
-
 </html>
